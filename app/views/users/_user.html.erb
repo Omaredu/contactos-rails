@@ -1,0 +1,11 @@
+<div class="border-b border-slate-200 py-5 flex items-center gap-10">
+  <div>
+    <p><%= user.username %></p>
+    <p class="text-sm text-slate-400"><%= user.email %> &bull; <%= user.phone %></p>
+  </div>
+  <%= link_to "Eliminar",
+              user,
+              data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' },
+              class:
+                "text-sm text-slate-400 hover:text-red-500 hover:underline" %>
+</div>
